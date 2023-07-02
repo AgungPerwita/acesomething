@@ -1,0 +1,314 @@
+1. Your company has an application running in the Compute Engine VM that belongs to the GCP project called dev-proj with appropriate IAM roles defined. In several weeks, the application is ready to be deployed to production, so you created the project called prod-proj. In order to equalize the development and production environment, you want the prod-proj to have the same IAM roles as the dev-proj. Using the fewest possible steps, what should you do?
+    a. In the Google Cloud Platform Console, use the 'create role' functionality and select all applicable permissions.
+    b. Use gcloud iam roles copy and specify the production project as the destination project.
+    c. Use gcloud iam roles copy and specify your organization as the destination organization.
+    d. In the Google Cloud Platform Console, use the 'create role from role' functionality.
+
+2. Your Accounting team has to perform cost analysis measures to review and plan for the next IT budget. They need your help to export the billing details, crunch the numbers, reduce complexity and visualize it in a dashboard. Choose the correct method of setting up the billing export.
+    a. Export the data to a Cloud SQL DB and perform queries to deduce the cost analysis.
+    b. Export data to BigQuery and use Looker (Data Studio) to create customizable informative reports right.
+    c. Use Cloud Functions and write custom code to extract details from the budget data.
+    d. Use Cloud Logging and create custom metrics.
+
+3. You built an application on Google Cloud that uses Cloud Spanner. Your support team needs to monitor the environment but should not have access to table data. You need a streamlined solution to grant the correct permissions to your support team, and you want to follow Google-recommended practices. What should you do?
+    a. Add the support team group to the roles/spanner.databaseUser role.
+    b. Add the support team group to the roles/monitoring.viewer role.
+    c. Add the support team group to the roles/spanner.databaseReader role.
+    d. Add the support team group to the roles/stackdriver.accounts.viewer role.
+
+4. There is a requirement to develop a Prototype for an OCR (Optical Character Recognition) based Expense management application. It should ideally have the functionality of scanning receipts and extracting textual data. You have a very small team and also have to deliver the project's prototype on a quick timeline. Which of the following approaches can be adopted to implement the requirement?
+    a. Assign the OCR application development work to an in-house Data Science team to model the data in a customized way with training and prediction services using the GCP AI platform.
+    b. Use Cloud Data flow for streaming data pipelines.
+    c. Use Vertex Al to model the data and leverage the features of AutoML.
+    d. Use the Vision API and use pre-trained data models.
+
+5. In your organization, it was recently reported that a dev environment's database was compromised but quickly secured back. Based on the internal analysis, it was found that a new intern had unknowingly allowed internet access to a Cloud SQL instance. Although it is a matter of lesser significance in a dev environment, you want to make sure this issue does not happen again. Hence you decide to enforce a centralized organization policy. Which of the following action accomplishes this task?
+    a. Set an Organization Policy to use constraints/sql.denyEgressTraffic to deny external internet access.
+    b. Create a VPC network to allow only authorized access based on firewall rules to deny traffic from external internet access.
+    c. Use IAM (Identity and Access Management) to restrict Access for the Intern only with Viewer level access to the dev environment folder.
+    d. Set an Organization Policy to use constraints/sql.restrictPubliclp to restrict external internet access rights.
+
+6. You are currently working on a freelance project where you have to deploy a WordPress website on VM. You decided to use a startup script to install WordPress and other libraries instead of manual installation. While launching you forgot to use the startup script and are wondering how to do it now. What should you do?
+    a. Stop the instance, add metadata with startup-script as key, and script content as value, and start the instance.
+    b. Edit the instance by selecting it, add metadata with the script as key, add script content as value, and restart the instance.
+    c. Edit the instance by selecting it, add your startup script to the user data field, and restart your instance.
+    d. Stop the instance, add a script into the startup script field, and start the instance.
+
+7. What is the correct command to set the default zone for Compute Engine VM using gcloud CLI?
+    a. gcloud config set compute/zone us-east1
+    b. gcloud config configurations set compute/zone us-east1-a
+    c. gcloud config set compute/zone us-east1-a
+    d. gcloud defaults set compute/zone us-east1
+
+8. While working on a project, an application administrator has been given the responsibility of managing all resources. He wants to delegate the responsibility of managing the existing service accounts to another administrator. He will also be responsible to manage the other service accounts that will be created. Which of the following is the best way to delegate the privileges required to manage all the service accounts?
+    a. Granting iam.serviceAccountUser to the administrator at the project level
+    b. Granting iam.serviceProjectAccountUser to the administrator at the project level
+    c. Granting iam.serviceAccountUser to the administrator at the service account level
+    d. Granting iam.serviceProjectAccountUser to the administrator at the service account level
+
+9. You need to produce a list of the enabled Google Cloud Platform APIs for a GCP project using the gcloud command line in the Cloud Shell. The project name is my-project. What should you do?
+    a. Run gcloud projects describe <project ID> to verify the project value, and then run gcloud services list --available.
+    b. Run gcloud info to view the account value, and then run gcloud services list --account <Account>.
+    c. Run gcloud projects list to get the project ID, and then run gcloud services list --project <project ID>.
+    d. Run gcloud init to set the current project to my-project, and then run gcloud services list --available.
+
+10. Your company has 5 TB of testing data stored in the production database of a testing tool name Quality Center. The data is being used to create a real-time analytics system which is causing a slow response to the tester while using the tool. What should you do the improve the load on the database?
+    a. Scale the database instance.
+    b. Run the analytics query only on weekends.
+    c. Set up Multi-AZ.
+    d. Set up a read replica.
+
+11. Your client wants to develop a new cost-effective web application that runs on a serverless platform using Cloud Function, Cloud Storage, Pub/Sub, and Cloud CDN. The expected data would be 20 GB. Which of the following databases would be the most suitable schemaless option to support the serverless functionality?
+    a. Cloud Spanner
+    b. Cloud Bigtable
+    c. Cloud Firestore
+    d. BigQuery
+
+12. You work for a financial company as a Cloud Engineer. Your manager asked you to find a solution to store audit log files for 3 years. Your company has hundreds of GCP projects. You need to implement a cost-effective approach for log file retention. What solution that you will give to the manager?
+    a. Create an export to the sink that saves logs from Cloud Audit to a coldline Cloud Storage bucket.
+    b. Create an export to the sink that saves logs from Cloud Audit to BigQuery.
+    c. Write a custom script that uses logging API to copy the logs from Cloud Logging to BigQuery.
+    d. Export logs to Cloud Pub/Sub and write a Cloud Dataflow pipeline to store logs to Cloud SQL.
+
+13. You are working along with a team of developers who are building an accounting application for a startup. Until now, they were using VM disk to store logs but have now realized that this strategy is not scalable and want a different solution to store logs. Which service would you recommend to the team?
+    a. Activity Logs
+    b. Cloud Logging
+    c. Flow Logs
+    d. Google Kubernetes Engine
+
+14. A new client has approached your company who wants a serverless static application running on Google Cloud. They want their frontend in React and backend to be written in Python because they have an in-house team that is familiar with React and Python. Which service(s) will you prefer to use?
+    a. Cloud Functions
+    b. Cloud Pub/Sub and Cloud Storage
+    c. Google Kubernetes Engine and Cloud Functions
+    d. Cloud Functions and Cloud Storage
+
+15. Your manager asked you to configure a solution for archiving data in a Cloud Storage bucket. These are the requirements given by the manager:
+    1. It must be cost-effective.
+    2. Data with multiple versions should be archived after 30 days.
+    3. Previous versions are accessed once a month for reporting.
+    4. This archived data is also occasionally updated at month-end.
+    Considering those requirements, what should you do?
+    a. Add a bucket lifecycle rule that archives data with newer versions after 30 days to Coldline Storage.
+    b. Add a bucket lifecycle rule that archives data with newer versions after 30 days to Nearline Storage.
+    c. Add a bucket lifecycle rule that archives data from regional storage after 30 days to Coldline Storage.
+    d. Add a bucket lifecycle rule that archives data from regional storage after 30 days to Nearline Storage.
+
+16. For developing a small-scale PoC (Proof of Concept), there is a requirement to run workloads like batch job processing and building agents as a part of your continuous integration/continuous delivery (CI/CD) infrastructure pipeline. These tasks run for less than a day and are estimated to be short-lived processes. The workloads should be flexible to configure as well as cost-effective.
+    Which option would be most suitable to satisfy this requirement?
+    a. Use Compute Engine custom machine types and choose the required number of virtual CPUs and disk spaces.
+    b. Use Compute Engine with preemptible VM instances.
+    c. Use Cloud Functions to run the workload at a minimal cost.
+    d. Use Compute Engine with predefined VM instances and templates.
+
+17. You have set a firewall rule that will permit inbound connections to a VM instance named dev-server-2. You want to apply this rule only if there is no other rule that would deny that traffic. What priority would you give to this rule?
+    a. 1000
+    b. 1
+    c. 65535
+    d. 0
+
+18. You have to build a functionality to manage user sessions in an online shopping cart for retail transactions. There is a need to ensure that users can lock down one or more documents until their transaction is complete. What would be the correct choice of database to handle the requirement?
+    a. Use Cloud Firestore to handle user session management.
+    b. Use Cloud SQL and use sub-queries to hold the session.
+    c. Use BigQuery for streaming data from user sessions.
+    d. Use Cloud Spanner to manage user sessions.
+
+19. You are one of the Cloud Engineers in an Enterprise level tech company. You have been given the task to come up with a plan to run complex workloads that need flexibility and control at the configuration level with high memory and processing power. The workloads are planned to run for the next 6 months. Choose the cost-effective option to achieve the best performance for a specific workload.
+    a. Choose App Engine to run the workload and reduce the complexity.
+    b. Choose Compute Engine VMs with predefined types and use templates from the GCP marketplace.
+    c. Choose Cloud Run to fetch Docker images from Container Registry and run the workload.
+    d. Choose Compute Engine with custom machine types and select the required number of vCPUs and gigabytes of memory.
+
+20. You work for a retail company that has a busy online store. As you are approaching New Year, you find that your e-store is getting more and more traffic. You ensure that your web servers are behind a managed instance group. However, you notice that the web tier is frequently scaling, sometimes multiple times in an hour. You need to prevent the instance group from scaling up and down so rapidly. Which of the following options would help you to achieve this?
+    a. Change the auto-scaling metric to use multiple metrics instead of just one metric.
+    b. Reduce the maximum instance count.
+    c. Associate a health check with the instance group.
+    d. Increase the cooldown period.
+
+21. You are working for a service company that has an automobile client. The client has developed an application for internal use with Erlang and has approached your company to help him to ease the application deployment process on Google Cloud. The company does not have highly trained people, so it wants you to deploy the application in such a way that post-deployment they will be able to manage it without worrying about the infrastructure. Which of the following services would you prefer?
+    a. App Engine Standard
+    b. Cloud Functions
+    c. Google Kubernetes Engine
+    d. App Engine Flexible
+
+22. A bug has been identified within your Python application which is hosted using App Engine and you are about to roll out a new version of the application to resolve the bug, but do not want the traffic to automatically shift to a new version just to make sure the new version does not break anything. How would you achieve it?
+    a. Use --inactive-mode flag while deploying a new version of the app.
+    b. Pass --no-active flag while deploying a new version.
+    c. Pass a custom version ID so that App Engine does not send traffic to the new version.
+    d. Pass --no-promote flag while deploying a new version.
+
+23. You have been asked to create robust Virtual Private Network (VPN) connectivity between a new Virtual Private Cloud (VPC) and a remote site. Key requirements include dynamic routing, a shared address space of 10.19.0.1/22, and no overprovisioning of tunnels during a failover event. You want to follow Google-recommended practices to set up a high-availability Cloud VPN. What should you do?
+    a. Use a custom mode VPC network, configure static routes, and use active/passive routing.
+    b. Use a custom mode VPC network, use Cloud Router border gateway protocol (BGP) routes, and use active/passive routing.
+    c. Use an automatic mode VPC network, configure static routes, and use active/active routing.
+    d. Use an automatic mode VPC network, use Cloud Router border gateway protocol (BGP) routes, and configure policy-based routing.
+
+24. Your company is about to migrate a few of its servers initially from on-premise to Google Cloud and you have been asked to lead this task. All the instances have been migrated completely, but you are still left with creating health checks for all the instances. Which Google Cloud service will help you create health checks?
+    a. Prometheus
+    b. Grafana
+    c. Cloud Monitoring
+    d. Cloud Alerts
+
+25. You created an application for a large hospital that stores around 1 GB of files every day on Cloud Storage. Most of these files are accessed very rarely after six months from the day of the first upload but are important and cannot be deleted. Which storage class would you prefer to save money on after 6 months?
+    a. Standard
+    b. Nearline
+    c. Coldline
+    d. Regional
+
+26. In your company, there are massive data services that are currently running Hadoop/Spark on-premises. The Cloud Architects start their work on a migration plan to Google Cloud. However, the big data team wants to use the existing workflows during the migration. The main focus is to continue working on their Hadoop cluster and Spark jobs with the scaling and data processing capacity of Google Cloud. Which tool would be the right option to choose?
+    a. Cloud Dataproc
+    b. Cloud Dataflow
+    c. Cloud Dataprep
+    d. Looker Studio
+
+27. Your client is planning to deploy an application on App Engine and has a requirement to store 1 TB of data in a schemaless, a strongly consistent, ACID-compliant database solution. Which of the following would you consider for this?
+    a. Cloud Datastore
+    b. Cloud SQL
+    c. Cloud Storage
+    d. Cloud Bigtable
+
+28. You have created a pre-populated PersistentVolume disk as ReadOnlyMany, when you try to mount the volume to a POD, you get failed to mount error. What could be the most likely reason for this failure?
+    a. You have not specified the correct mount point in your pod.yaml file.
+    b. You entered an incorrect PersistentVolume name in the pod.yaml file.
+    c. You created a PersistentVolume but did not create a PersistentVolumeClaim.
+    d. The pod.yaml file doesn't have permission to mount the volume as it is created with ReadOnlyMany access.
+
+29. You are planning to build a microservices application with Docker containers and want to host them on Google Cloud as stateless and serverless. Which service will help you serve the need?
+    a. App Engine Flexible
+    b. App Engine Standard
+    c. Cloud Run
+    d. Cloud Functions
+
+30. You have an application server running on Compute Engine in the europe-west1-d zone. You need to ensure high availability and replicate the server to the europe-west2-c zone using the fewest steps possible. What should you do?
+    a. Create a snapshot from the disk. Create a disk from the snapshot in the europe-west2-c zone. Create a new VM with that disk.
+    b. Create a snapshot from the disk. Create a disk from the snapshot in the europe-west1-d zone and then move the disk to europe-west2-c. Create a new VM with that disk.
+    c. Use “gcloud” to copy the disk to the europe-west2-c zone. Create a new VM with that disk.
+    d. Use “gcloud compute instances move” with the parameter “--destination-zone europe-west2-c” to move the instance to the new zone.
+
+31. You need to select and configure compute resources for a set of batch processing jobs. These jobs take around 2 hours to complete and are run nightly. You want to minimize service costs. What should you do?
+    a. Select Compute Engine. Use VM instance types that support micro bursting.
+    b. Select Google Kubernetes Engine. Use a single-node cluster with a small instance type.
+    c. Select Compute Engine. Use preemptible VM instances of the appropriate standard machine type.
+    d. Select Google Kubernetes Engine. Use a three-node cluster with micro instance types.
+
+32. You have had an application running on Compute Engine VM instance written in .NET for the last few weeks. Suddenly you experience elevated latency and poor performance among application endpoints. Which service can help you troubleshoot this issue?
+    a. Activity Logs
+    b. Cloud Monitoring
+    c. Cloud Trace
+    d. Cloud Profiler
+
+33. A developer created a GCP project and deployed his Nodejs app to the App Engine inside that project. Unfortunately, he has made a mistake. He created the App Engine application in the us-central1 region, which should be in the asia-northeast1 region. What is your solution to help the developer?
+    a. Create a second App Engine application in the existing GCP project and specify asia-northeast1 as the region to serve your application.
+    b. Create a new GCP project and create an App Engine application inside this new project. Specify asia-northeast1 as the region to serve your application.
+    c. Change the region property setting in the existing App Engine application from us-central1 to asia-northeast1.
+    d. Change the default region property setting in the existing GCP project to asia-northeast1.
+
+34. You have production and test workloads that you want to deploy on Compute Engine. Production VMs need to be in a different subnet than the test VMs. All the VMs must be able to reach each other over Internal IP without creating additional routes. You need to set up VPC and the 2 subnets. Which configuration meets these requirements?
+    a. Create a single custom VPC with 2 subnets. Create each subnet in a different region and with a different CIDR range.
+    b. Create a single custom VPC with 2 subnets. Create each subnet in the same region and with the same CIDR range.
+    c. Create 2 custom VPCs, each with a single subnet. Create each subnet in a different region and with a different CIDR range.
+    d. Create 2 custom VPCs, each with a single subnet. Create each subnet in the same region and with the same CIDR range.
+
+35. Your client comes to you to ask for a solution to their problem. They have an application that runs on multiple VM within a Managed Instance Group and has autoscaling enabled. They configure the autoscaling policy so that additional instances are added to the group if the CPU utilization of instances goes above 80%. The VMs are added until the instance group reaches its maximum limit of 5 VMs or until the CPU utilization of instances lowers to 80%.
+    The client also set the initial delay set to 30 seconds for HTTP health checks against the instances. The VM instances take around 3 minutes to become available for users for downloading the dependencies and running the web server.
+    You observe that when the instance group autoscales, it adds more instances than necessary to support the levels of end-user traffic. You want to properly maintain instance group sizes when autoscaling. What should you do?
+    a. Use a TCP health check instead of an HTTP health check.
+    b. Increase the initial delay of the HTTP health check to 200 seconds.
+    c. Decrease the maximum number of instances to 3.
+    d. Set the maximum number of instances to 1.
+
+36. You are working as a System Administrator and have been asked to make sure that all images are patched up to date and developers are not allowed to use old images that are not up to date as per PCI compliance. How would you achieve this?
+    a. Drop a mail to all the developers regarding which image to use whenever you patch images.
+    b. Mark the image as deprecated to prevent users from using the old image.
+    c. Mark the image as obsolete to prevent users from using the old image.
+    d. None of the above.
+
+37. Your client has an HTTPS web application that runs using an autoscaling Managed Instance Group. The requirement given by your client is that the unhealthy VMs are recreated as soon as possible to maintain the availability of the web application. What should you do?
+    a. In the Instance Template, add the label 'health-check'.
+    b. Select Multi-Zone instead of Single-Zone when creating the Managed Instance Group.
+    c. Create a health check on port 443 and use that when creating the Managed Instance Group.
+    d. In the Instance Template, add a startup script that sends a heartbeat to the metadata server.
+
+38. Your projects incurred more costs than you expected last month. Your research reveals that a development Google Kubernetes Engine container emitted a huge number of logs, which resulted in higher costs. You want to disable the logs quickly using the minimum number of steps. What should you do?
+    a. 1. Go to the Logs ingestion window in Stackdriver Logging.
+       2. Disable the log source for the Google Kubernetes Engine Cluster Operations resource.
+    b. 1. Go to the Google Kubernetes Engine console and delete existing clusters.
+       2. Recreate a new cluster.
+       3. Clear the option to enable legacy Stackdriver Logging.
+    c. 1. Go to the Logs ingestion window in Stackdriver Logging.
+       2. Disable the log source for the Google Kubernetes Engine container resource.
+    d. 1. Go to the Google Kubernetes Engine console and delete existing clusters.
+       2. Recreate a new cluster. 
+       3. Clear the option to enable legacy Stackdriver Monitoring.
+
+39. You need to grant access for three users so that they can view and edit table data on a Cloud Spanner instance. What should you do?
+    a. Run gcloud iam roles describe roles/spanner.databaseUser. Add the users to the role.
+    b. Run gcloud iam roles describe roles/spanner.databaseUser. Add the users to a new group. Add the group to the role.
+    c. Run gcloud iam roles describe roles/spanner.viewer - -project my-project. Add the users to a new group. Add the group to the role.
+    d. Run gcloud iam roles describe roles/spanner.viewer - -project my-project. Add the users to the role.
+
+40. You recently deployed a new version of an application to App Engine and then discovered a bug in the release. You need to immediately revert to the prior version of the application. What should you do?
+    a. On the App Engine page of the Cloud Console, select the application that needs to be reverted and click Revert.
+    b. On the App Engine Versions page of the Cloud Console, route 100% of the traffic to the previous version.
+    c. Run gcloud app restore.
+    d. Deploy the original version as a separate application. Then go to App Engine settings and split traffic between applications so that the original version serves 100% of the requests.
+
+41. When managing a customer-facing website, the frontend domain is configured with Cloud CDN for faster content delivery, and Compute Engine Instance groups are configured to support the backend functionality. There is a need to enforce visitors of the application who request through HTTP must be redirected to more secure HTTPS pages and essentially allow both HTTP and HTTPS traffic inside the same domain name of the website.
+    Which of the following approaches should be followed to accomplish it? 
+    a. Reserve an IP address and bind it to both the HTTP and HTTPS frontend configuration in the External TCP Proxy Load Balancing.
+    b. Dynamically assign an ephemeral IP address and add the HTTP and HTTPS configurations separately in the External HTTP(S) Load Balancing.
+    c. Dynamically assign a temporary IP address and update the HTTP and HTTPS configurations separately in External SSL Proxy Load Balancing.
+    d. Reserve an IP address and bind it to both the HTTP and HTTPS frontend configuration in the external External HTTP(S) Load Balancing.
+
+42. In your Company, two teams are working on their respective GCP projects with similar cloud resources. Due to time constraints and minimizing the work of creating separate VPC networks, they have a requirement of using the same subnet. Which of the following would enable both teams while maintain centralized control over network resources like subnets, routes, and firewalls?
+    a. Create a Shared VPC and attach service projects to it to use the same subnet.
+    b. Create a Shared VPC and designate a project as a host project and attach the other service projects to it to use the same subnet.
+    c. Create a custom-mode VPC and use the same subnet.
+    d. Create an auto-mode VPC and use the same subnet for each region.
+
+43. Someone from a different team has approached you that he is working on a web application hosted on Compute Engine VM instance which needs to view access to Cloud Storage service. Which of the following is the best approach using the fewest possible steps?
+    a. Create a custom service account with the Cloud Storage Viewer role, and attach it to the VM instance.
+    b. Create a custom service account with Cloud Storage Viewer role, create a JSON key pair, and provide it to him.
+    c. VM Instances by default have read access to Cloud Storage service, so nothing needs to be done.
+    d. Create an IAM user for him with Cloud Storage, create a JSON key pair, and provide it to him.
+
+44. Your company has an existing GCP organization with hundreds of projects and a billing account. Your company recently acquired another company that also has hundreds of projects and its own billing account. You would like to consolidate all GCP costs of both GCP organizations onto a single invoice. You would like to consolidate all costs as of tomorrow. What should you do?
+    a. Configure the acquired company's billing account and your company's billing account to export the billing data into the same BigQuery dataset.
+    b. Migrate the acquired company's projects into your company's GCP organization. Link the migrated projects to your company's billing account.
+    c. Link the acquired company's projects to your company's billing account.
+    d. Create a new GCP organization and a new billing account. Migrate the acquired company's projects and your company's projects into the new GCP organization and link the projects to the new billing account.
+
+45. Your colleague was assigned a new DevOps project in Google Cloud Platform and he needs deploymentmanager.deployments.* permission to make use of Deployment Manager service. Which of the following roles would you create for him?
+    a. Deployment Manager Editor
+    b. Deployment Manager Custom
+    c. Deployment Manager Type Viewer
+    d. Deployment Manager Viewer
+
+46. Your machine learning team is building an application that will run in your on-premise infrastructure. The application will use one of the machine learning services in the Google Cloud Platform, which is AutoML. To help their project, you created a service account that has appropriate access to AutoML. You need to enable authentication to the APIs from your on-premises environment. What should you do?
+    a. Use service account credentials in your on-premises application.
+    b. Set up a direct connection using Cloud Interconnect between your on-premise and Google Cloud Platform to enable authentication for your on-premises applications.
+    c. Use gcloud to create a key file for the service account that has appropriate permissions.
+    d. Go to the IAM & Admin console, grant user account permissions similar to the service account permissions, and use this user account for authentication from your on-premise.
+
+47. One of your team members had accidentally included a service account private JSON key while pushing code to GitHub. What steps should you immediately perform?
+    a. Delete the JSON file from GitHub.
+    b. Delete the project and all its resources.
+    c. Delete the JSON file from GitHub, remove the key from Google Cloud IAM and generate a new key for use.
+    d. None of the above
+
+48. Your organization uses Google Workspace for communication and collaboration. All users in your organization have a Google Workspace account. You want to grant some Google Workspace users access to your GCP project. What should you do?
+    a. Create a CSV sheet with all users' email addresses. Use the gcloud command line tool to convert them into Google Cloud Platform accounts.
+    b. Grant them the required IAM roles using their Google Workspace email address.
+    c. In the Google Workspace console, add the users to a special group called cloud-console-users@yourdomain.com. Rely on the default behavior of the Google Cloud Platform to grant users access if they are members of this group.
+    d. Enable Cloud Identity in the Cloud Console for your domain.
+
+49. Your client hosts a static website on Cloud Storage written in HTML, CSS, and JavaScript. The site targets users in North America. The usage of the website has grown worldwide and hundreds of thousands of visitors access it monthly. Visitors from different parts of the world are experiencing slow performance due to latency while users in the United States experience normal response times. What service can mitigate this issue?
+    a. Storage Caching
+    b. Cloud DNS
+    c. Load Balancer
+    d. Cloud CDN
+
+50. You are appointed as a head of infrastructure security and the first thing you are asked is to create a few IAM users following best security practices. How would you ensure that these users are only able to launch a new instance and list them?
+    a. Create Compute Editor role and attach it to the users.
+    b. Attach Project Editor role to users.
+    c. Create a custom role with specific permissions and attach it to users.
+    d. Create a service account with the required permissions and attach it to users.
